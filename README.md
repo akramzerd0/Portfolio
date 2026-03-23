@@ -108,7 +108,7 @@ Build settings:
 
 ## Project structure
 
-\```
+```plaintext
 src/
   components/    # all UI components
   data/          # data.jsx — all site content lives here
@@ -116,7 +116,7 @@ src/
   styles/        # CSS files
 public/
   favicon.svg    # pixel floppy icon
-\```
+```
 
 ---
 
