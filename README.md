@@ -1,4 +1,5 @@
 # akram.dev
+
 > Hey Akram 💾
 >
 > I wanted to build something for you — something that I hoped would help you,
@@ -12,7 +13,7 @@
 > I hope this helps you land an amazing job. You deserve it.
 >
 > **How to make it yours:**
-> All your data — bio, projects, experience, links — lives in one file: `src/data/jsx`.
+> All your data — bio, projects, experience, links — lives in one file: `src/data/data.jsx`.
 > Update it with your real info and it becomes fully you.
 >
 > **A few notes:**
@@ -32,7 +33,7 @@
 
 - [React](https://react.dev) — UI
 - [Vite](https://vitejs.dev) — build tool
-- [Netlify](https://netlify.com) — hosting (just a suggestion for deployment )
+- [Netlify](https://netlify.com) — hosting
 
 ---
 
@@ -43,23 +44,20 @@
 - npm
 
 ### Clone the repo
-
-\```bash
+```bash
 git clone https://github.com/Elby2112/akram-portfolio.git
 cd akram-portfolio
-\```
+```
 
 ### Install dependencies
-
-\```bash
+```bash
 npm install
-\```
+```
 
 ### Run locally
-
-\```bash
+```bash
 npm run dev
-\```
+```
 
 Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
@@ -68,14 +66,13 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 ## Customization
 
 All content — bio, projects, experience, skills, games, hobbies — lives in one file:
-
-\```
+```plaintext
 src/data/data.jsx
-\```
+```
 
 Edit that file to update anything on the site. No other files need to change for content updates.
 
-To change the accent color default, update `accentIndex` initial value in `src/App.jsx`:
+To change the accent color default, update `accentIndex` in `src/App.jsx`:
 - 0 = purple
 - 1 = red
 - 2 = gold
@@ -87,27 +84,26 @@ To change the accent color default, update `accentIndex` initial value in `src/A
 ## Build & deploy
 
 ### Build for production
-
-\```bash
+```bash
 npm run build
-\```
+```
 
 Output goes to `/dist`. This is what Netlify serves.
 
 ### Deploy to Netlify
 
-We'll connect the repo to a netifly account 
+Connect this repo to your Netlify account and use these build settings:
 
-Build settings:
 | Setting | Value |
 |---|---|
 | Build command | `npm run build` |
 | Publish directory | `dist` |
 
+Any push to `main` will trigger an automatic redeploy.
+
 ---
 
 ## Project structure
-
 ```plaintext
 src/
   components/    # all UI components
@@ -120,4 +116,4 @@ public/
 
 ---
 
-*// built by Loubna, with love*
+*// built by Loubna, with 💾*
