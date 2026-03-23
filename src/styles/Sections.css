@@ -1,0 +1,398 @@
+/* ── Hero ── */
+.hero {
+  margin-bottom: 3rem;
+  overflow: hidden; /* clearfix for float */
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Photo floats top-right exactly like Tania's mascot */
+.hero-photo-wrap {
+  float: right;
+  margin: 0 2rem 1.5rem 2rem;
+}
+
+.hero-photo,
+.hero-photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo {
+  border: 3px solid var(--border);
+}
+
+.hero-photo-placeholder {
+  background: var(--tag-bg);
+  border: 3px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Fragment Mono', monospace;
+}
+
+.hero-body {
+  font-size: 1rem;
+  color: var(--text);
+  max-width: 540px;
+  line-height: 1.8;
+  margin-bottom: 0.65rem;
+  text-align: left;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+.hero-btn:hover {
+  border-color: var(--accent);
+  background: var(--tag-bg);
+  text-decoration: none;
+  color: var(--text);
+}
+
+@media (max-width: 500px) {
+  .hero-photo-wrap { float: none; margin: 0 0 1.5rem 0; }
+  .hero-photo, .hero-photo-placeholder { width: 90px; height: 90px; }
+}
+
+/* ── Generic Section ── */
+.section {
+  margin-bottom: 3.25rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.2rem;
+}
+.section-header .section-icon {
+  display: flex;
+  color: var(--text);
+}
+
+.section-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.section-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+/* ── Entry list (Projects) ── */
+.entry-list { display: flex; flex-direction: column; }
+
+.entry-row {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.entry-row:first-child { border-top: 1px solid var(--border); }
+
+.entry-year {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.76rem;
+  color: var(--text-subtle);
+  padding-top: 0.15rem;
+}
+
+.entry-title {
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+}
+.entry-title:hover { text-decoration: underline; }
+
+.entry-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.4rem; }
+
+.tag {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.67rem;
+  padding: 0.12rem 0.42rem;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 3px;
+}
+
+.entry-links { display: flex; gap: 0.7rem; }
+.entry-link { font-size: 0.8rem; font-weight: 700; color: var(--accent); }
+.entry-link:hover { opacity: 0.75; text-decoration: none; }
+
+/* ── Games (Play) ── */
+.games-list { display: flex; flex-direction: column; }
+
+.game-row {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 0.75rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.game-row:first-child { border-top: 1px solid var(--border); }
+
+.game-emoji { font-size: 1.35rem; }
+.game-title { font-size: 0.93rem; font-weight: 700; color: var(--text); margin-bottom: 0.08rem; }
+.game-meta {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  margin-bottom: 0.2rem;
+}
+.game-note { font-size: 0.84rem; color: var(--text-muted); }
+
+/* ── CV ── */
+.cv-block { margin-bottom: 2rem; }
+
+.cv-label {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-subtle);
+  margin-bottom: 0.65rem;
+}
+
+.cv-list { display: flex; flex-direction: column; }
+
+.cv-row {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.cv-row:first-child { border-top: 1px solid var(--border); }
+
+.cv-role  { font-size: 0.93rem; font-weight: 700; color: var(--text); }
+.cv-where { font-size: 0.86rem; color: var(--accent); }
+.cv-period {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-subtle);
+  margin: 0.12rem 0 0.35rem;
+}
+.cv-detail { font-size: 0.84rem; color: var(--text-muted); }
+
+.cv-bullets {
+  list-style: none;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+.cv-bullets li {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+.cv-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.72rem;
+  top: 0.1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 1.1rem;
+  margin-top: 0.4rem;
+}
+.skill-group-name {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+  margin-bottom: 0.35rem;
+}
+
+/* ── Stay Connected ── */
+.connect-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.connect-links a {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+}
+.connect-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ── About Me page ── */
+.about-block { margin-bottom: 2rem; }
+
+.about-block-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.about-sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.about-block-text {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.about-updated {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.about-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.about-list li {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.about-list li a { color: var(--accent); }
+
+.about-list--nested {
+  margin-top: 0.3rem;
+  list-style: circle;
+}
+
+.about-hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0;
+}
+
+/* ── CV Courses ── */
+.cv-courses-label {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-subtle);
+  margin: 0.5rem 0 0.4rem;
+}
+
+.cv-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0 3rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.footer-link:hover { color: var(--accent); text-decoration: none; }
+
+.footer-built {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-built-link {
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.footer-built-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-credit {
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+}

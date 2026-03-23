@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fragment+Mono&display=swap');
+
+/* ── Hard reset everything including Vite defaults ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Kill Vite's #root centering */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* ── CSS Variables (light mode defaults) ── */
+:root {
+  --bg:           #f5f0e8;
+  --text:         #111111;
+  --text-muted:   #555555;
+  --text-subtle:  #888888;
+  --border:       #d8d0c4;
+  --tag-bg:       #e8e2d8;
+  --tag-text:     #444444;
+  --btn-bg:       #e8e2d8;
+  --nav-active-bg:#ede8df;
+  --accent:       #1d4ed8;
+}
+
+:root.dark {
+  --bg:           #1c1c1e;
+  --text:         #e8e4dc;
+  --text-muted:   #aaaaaa;
+  --text-subtle:  #666666;
+  --border:       #2e2e30;
+  --tag-bg:       #2a2a2c;
+  --tag-text:     #bbbbbb;
+  --btn-bg:       #2a2a2c;
+  --nav-active-bg:#2a2a2c;
+}
+
+/* ── Base ── */
+html, body {
+  width: 100%;
+  text-align: left;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Atkinson Hyperlegible', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.7;
+  transition: background 0.25s, color 0.25s;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* ── Layout: sidebar on the left, main fills the rest ── */
+.layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ── Main content ── */
+.main-content {
+  padding: 2.75rem 3rem 5rem 3rem;
+  text-align: left;
+  min-width: 0;
+}
+
+/* ── Mobile header ── */
+.mobile-header {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.65rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: background 0.25s;
+}
+
+.mobile-logo {
+  font-family: 'Fragment Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.mobile-nav {
+  display: flex;
+  gap: 0.15rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+}
+.mobile-nav::-webkit-scrollbar { display: none; }
+
+.mobile-nav-btn {
+  padding: 0.28rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+}
+.mobile-nav-btn.active {
+  background: var(--tag-bg);
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+  .mobile-header { display: flex; }
+  .main-content { padding: 1.5rem 1rem 4rem; }
+}
