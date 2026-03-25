@@ -48,13 +48,26 @@ export default function App() {
     return () => observers.forEach(o => o && o.disconnect());
   }, [page]);
 
+  // Scroll fade-in for .section elements
+  useEffect(() => {
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      }),
+      { threshold: 0.1 }
+    );
+    sections.forEach(s => observer.observe(s));
+    return () => observer.disconnect();
+  }, [page]);
+
   const handleNav = (id) => {
     if (id === "about") {
-      setPage("about");
-      setActiveSection("about");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
+  setPage("about");
+  setActiveSection("about");
+  setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 50);
+  return;
+}
     // If coming from about page, go back to home first then scroll
     if (page === "about") {
       setPage("home");
@@ -107,7 +120,7 @@ export default function App() {
           onNav={handleNav}
         />
 
-        <main className="main-content">
+        <main className="main-content" key={page}>
           {page === "about" ? (
             <>
               <About />

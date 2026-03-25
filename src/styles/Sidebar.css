@@ -163,6 +163,14 @@
   margin-bottom: 1.1rem;
 }
 
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin-bottom: 1.1rem;
+  position: relative; /* needed for the indicator */
+}
+
 .nav-btn {
   display: flex;
   align-items: center;
@@ -178,18 +186,37 @@
   text-align: left;
   width: 100%;
   font-family: inherit;
-  transition: background 0.12s;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 1;
 }
-.nav-btn:hover { background: var(--nav-active-bg); }
-.nav-btn.active {
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
   background: var(--nav-active-bg);
+  opacity: 0;
+  transform: scaleX(0.85);
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: -1;
+}
+
+.nav-btn:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav-btn.active::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav-btn.active {
   color: var(--accent);
 }
-.nav-btn .nav-icon {
-  display: flex;
-  flex-shrink: 0;
-  color: var(--text);
-}
+.nav-btn .nav-icon { display: flex; flex-shrink: 0; color: var(--text); }
 .nav-btn.active .nav-icon { color: var(--accent); }
 
 /* Stay Connected in sidebar */

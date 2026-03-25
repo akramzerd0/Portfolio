@@ -108,13 +108,18 @@
 .section-header .section-icon {
   display: flex;
   color: var(--text);
+  font-size: 2rem;
 }
-
+.section-header .section-icon svg {
+  width: 2rem;   
+  height: 2rem;  
+}
 .section-title {
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: var(--text);
 }
+
 
 .section-sub {
   font-size: 0.88rem;
@@ -396,3 +401,4 @@
   font-size: 0.82rem;
   color: var(--text-subtle);
 }
+
