@@ -4,7 +4,7 @@ import { IconCV, IconAbout } from "./Icons.jsx";
 export default function Hero({ onNav }) {
   return (
     <section id="home" className="hero">
-      {/* Photo floated top-right like Tania's mascot */}
+    
       <div className="hero-photo-wrap">
         {DATA.photo ? (
           <img src={DATA.photo} alt={DATA.name} className="hero-photo" />
@@ -15,7 +15,7 @@ export default function Hero({ onNav }) {
         )}
       </div>
 
-      <h1>Hey, I'm {DATA.name}!</h1>
+      <h1>Hey, I'm {DATA.name} 👋</h1>
       <p className="hero-body">{DATA.heroBio}</p>
       <p className="hero-note">{DATA.heroNote}</p>
       <div className="hero-btns">

@@ -1,7 +1,7 @@
 /* Set color: var(--accent) on .nav-btn.active .nav-icon to tint accent pixels */
 
 export function IconProjects({ size = 20 }) {
-  // GitHub octocat — pixel art style
+ 
   return (
     <svg width={size} height={size} viewBox="0 0 20 20" fill="none"
       style={{ display:"block", imageRendering:"pixelated" }}>
