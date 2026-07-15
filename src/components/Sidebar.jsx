@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { DATA, ACCENT_COLORS, NAV_ITEMS } from "../data/data.jsx";
 import { IconFloppy, IconProjects, IconPlay, IconCV, IconConnect, IconAbout, IconMoon, IconSun } from "./Icons.jsx";
-import "../styles/sidebar.css";
+import "../styles/Sidebar.css";
 
 const NAV_ICONS = {
   projects: IconProjects,
