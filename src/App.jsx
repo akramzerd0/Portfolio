@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 import "./styles/Global.css";
-import "./styles/sidebar.css";
-import "./styles/sections.css";
+import "./styles/Sidebar.css";
+import "./styles/Sections.css";
 
 import { ACCENT_COLORS, NAV_ITEMS } from "./data/data.jsx";
 
