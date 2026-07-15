@@ -10,7 +10,7 @@ import Sidebar  from "./components/Sidebar.jsx";
 import Hero     from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
 import Play     from "./components/Play.jsx";
-import CV       from "./components/CV.jsx";
+import CV       from "./components/Cv.jsx";
 import About    from "./components/About.jsx";
 import Connect  from "./components/Connect.jsx";
 import Footer from './components/Footer.jsx';
