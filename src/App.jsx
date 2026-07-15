@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "./styles/global.css";
+import "./styles/Global.css";
 import "./styles/sidebar.css";
 import "./styles/sections.css";
 
