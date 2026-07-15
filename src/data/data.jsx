@@ -238,7 +238,7 @@ export const DATA = {
   },
 
   social: [
-    { label: "Email",       href: "mailto:akram@email.com" },
+    { label: "Email",       href: "mailto:zerdaouiakram3@gmail.com" },
     { label: "GitHub",      href: "https://github.com/akramzerd0" },
     { label: "LinkedIn",    href: "https://www.linkedin.com/in/akram-zerdaoui-bb651a259/" },
     { label: "Discord", href: "#" },
