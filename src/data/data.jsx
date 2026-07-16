@@ -177,7 +177,6 @@ export const DATA = {
       links: [
         { label: "GitHub",      href: "https://github.com/akramzerd0" },
         { label: "LinkedIn",    href: "https://www.linkedin.com/in/akram-zerdaoui-bb651a259/" },
-        { label: "Discord", href: "https://discord.com/channels/@me" },
       ],
     },
     now: {
@@ -241,7 +240,6 @@ export const DATA = {
     { label: "Email",       href: "mailto:zerdaouiakram3@gmail.com" },
     { label: "GitHub",      href: "https://github.com/akramzerd0" },
     { label: "LinkedIn",    href: "https://www.linkedin.com/in/akram-zerdaoui-bb651a259/" },
-    { label: "Discord", href: "#" },
   ],
 };
 
