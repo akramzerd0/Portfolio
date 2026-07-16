@@ -20,7 +20,7 @@ export const DATA = {
       demo: "https://huggingface.co/spaces/zakram23/glaucomaaa?logs=container",
     },
     {
-      year: "2025",
+      year: "2026",
       title: "Canadian Flight Price Prediction",
       description: "A machine learning project that predicts flight ticket prices across major Canadian cities using factors like airline, route, travel date, departure time, flight duration, and number of stops. The model helps users estimate ticket costs and better understand what influences airfare prices.",
       tags: ["Python", "scikit-learn", "Pandas", "NumPy", "Hugging Face Spaces", "Jupyter"],
@@ -175,9 +175,9 @@ export const DATA = {
       intro: "Send me an email to say hi, or connect via the socials.",
       email: "zerdaouiakram3@gmail.com",
       links: [
-        { label: "GitHub",      href: "#" },
-        { label: "LinkedIn",    href: "#" },
-        { label: "Discord", href: "#" },
+        { label: "GitHub",      href: "https://github.com/akramzerd0" },
+        { label: "LinkedIn",    href: "https://www.linkedin.com/in/akram-zerdaoui-bb651a259/" },
+        { label: "Discord", href: "https://discord.com/channels/@me" },
       ],
     },
     now: {
