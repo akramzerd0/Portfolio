@@ -7,7 +7,7 @@ export const DATA = {
  
   
   shortBio: "I'm Akram, software engineer and data scientist. This is my corner of the internet. 💾",
-  heroBio: `I'm a software engineer and data scientist with a Bachelor's in Computer Science and a Data Science diploma from a college in Canada. I love building things — from mobile apps to machine learning models — and I'm always looking for the next problem worth solving.`,
+  heroBio: `I’m a software engineer and data scientist with a Bachelor’s degree in Computer Science, a Data Science diploma from La Cité College in Canada, and one year of Master’s-level studies in Big Data Management and Analysis. I enjoy building practical solutions—from mobile applications to machine learning models—and I’m always looking for the next meaningful problem to solve.`,
 
 
   projects: [
