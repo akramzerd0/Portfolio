@@ -12,7 +12,7 @@ export const DATA = {
 
   projects: [
     {
-      year: "2025",
+      year: "2026",
       title: "Glaucoma Detection Using Deep Learning",
       description: "This project uses deep learning to detect signs of glaucoma from retinal fundus images. A fine-tuned VGG16 model classifies images as healthy or glaucoma-related, while Grad-CAM visualizations help explain which areas of the eye influenced the prediction. The goal is to support faster and more accessible glaucoma screening.",
       tags: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Pandas", "scikit-learn", "Matplotlib", "Grad-CAM", "Gradio", "Hugging Face Spaces", "Jupyter Notebook"],
