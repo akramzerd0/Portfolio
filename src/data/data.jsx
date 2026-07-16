@@ -185,7 +185,7 @@ export const DATA = {
         "Looking for my first full-time role in software or data engineering",
         "Building this website",
         "Playing Counter Strike 2",
-        "Learning content creation",
+        "Studying **Microsoft Azure AZ-900** while expanding my skills in Cloud Computing, AI, and MLOps.",
         "Recently graduated — celebrating! 🎓",
       ],
     },
